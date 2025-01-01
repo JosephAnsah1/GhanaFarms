@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghana Farms - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+<!-- Top Bar with Search -->
+<div class="top-bar">
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button type="button" onclick="searchSite()">Search</button>
+    </div>
+</div>
+
+    <!-- Navigation Bar with Logo and Website Name -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="gf-logo">GF</span>
+                <span class="site-name">Ghana Farms</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="order.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Grid Section -->
+    <section id="products">
+    <h3>Our Fresh Fruits and Vegetables</h3>
+    <div class="product-grid">
+        <div class="product" onclick="updateCart('Tomatoes', 5)">
+            <img src="tomatoes.jpg" alt="Tomatoes">
+            <p>Tomatoes - GH₵5 per kg</p>
+            <input type="number" min="0" value="0" id="tomatoesQty" onchange="updateCart('Tomatoes', 5)">
+        </div>
+        <div class="product" onclick="updateCart('Carrots', 4)">
+            <img src="carrots.jpg" alt="Carrots">
+            <p>Carrots - GH₵4 per kg</p>
+            <input type="number" min="0" value="0" id="carrotsQty" onchange="updateCart('Carrots', 4)">
+        </div>
+        <div class="product" onclick="updateCart('Cabbage', 3)">
+            <img src="cabbage.jpg" alt="Cabbage">
+            <p>Cabbage - GH₵3 per kg</p>
+            <input type="number" min="0" value="0" id="cabbageQty" onchange="updateCart('Cabbage', 3)">
+        </div>
+        <div class="product" onclick="updateCart('Spinach', 3.5)">
+            <img src="spinach.jpg" alt="Spinach">
+            <p>Spinach - GH₵3.5 per kg</p>
+            <input type="number" min="0" value="0" id="spinachQty" onchange="updateCart('Spinach', 3.5)">
+        </div>
+        <div class="product" onclick="updateCart('Mangoes', 6)">
+            <img src="mangoes.jpg" alt="Mangoes">
+            <p>Mangoes - GH₵6 per kg</p>
+            <input type="number" min="0" value="0" id="mangoesQty" onchange="updateCart('Mangoes', 6)">
+        </div>
+        <div class="product" onclick="updateCart('Bananas', 4.5)">
+            <img src="bananas.jpg" alt="Bananas">
+            <p>Bananas - GH₵4.5 per kg</p>
+            <input type="number" min="0" value="0" id="bananasQty" onchange="updateCart('Bananas', 4.5)">
+        </div>
+        <div class="product" onclick="updateCart('Oranges', 5)">
+            <img src="oranges.jpg" alt="Oranges">
+            <p>Oranges - GH₵5 per kg</p>
+            <input type="number" min="0" value="0" id="orangesQty" onchange="updateCart('Oranges', 5)">
+        </div>
+        <div class="product" onclick="updateCart('Pineapples', 7)">
+            <img src="pineapples.jpg" alt="Pineapples">
+            <p>Pineapples - GH₵7 per kg</p>
+            <input type="number" min="0" value="0" id="pineapplesQty" onchange="updateCart('Pineapples', 7)">
+        </div>
+        <div class="product" onclick="updateCart('Apples', 6)">
+            <img src="apples.jpg" alt="Apples">
+            <p>Apples - GH₵6 per kg</p>
+            <input type="number" min="0" value="0" id="applesQty" onchange="updateCart('Apples', 6)">
+        </div>
+        <div class="product" onclick="updateCart('Cucumber', 3)">
+            <img src="cucumber.jpg" alt="Cucumber">
+            <p>Cucumber - GH₵3 per kg</p>
+            <input type="number" min="0" value="0" id="cucumberQty" onchange="updateCart('Cucumber', 3)">
+        </div>
+        <div class="product" onclick="updateCart('Onions', 2.5)">
+            <img src="onions.jpg" alt="Onions">
+            <p>Onions - GH₵2.5 per kg</p>
+            <input type="number" min="0" value="0" id="onionsQty" onchange="updateCart('Onions', 2.5)">
+        </div>
+        <div class="product" onclick="updateCart('Pepper', 8)">
+            <img src="pepper.jpg" alt="Pepper">
+            <p>Pepper - GH₵8 per kg</p>
+            <input type="number" min="0" value="0" id="pepperQty" onchange="updateCart('Pepper', 8)">
+        </div>
+        <div class="product" onclick="updateCart('Watermelons', 4)">
+            <img src="watermelons.jpg" alt="Watermelons">
+            <p>Watermelons - GH₵4 per kg</p>
+            <input type="number" min="0" value="0" id="watermelonsQty" onchange="updateCart('Watermelons', 4)">
+        </div>
+        <div class="product" onclick="updateCart('Pears', 7)">
+            <img src="pears.jpg" alt="Pears">
+            <p>Pears - GH₵7 per kg</p>
+            <input type="number" min="0" value="0" id="pearsQty" onchange="updateCart('Pears', 7)">
+        </div>
+    </div>
+</section>
+<!-- Modal for Payment Options -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Select Payment Method</h3>
+        <p>Please choose a payment method to complete your order:</p>
+        <div class="payment-options">
+            <button onclick="processPayment('Mobile Money')">Mobile Money</button>
+            <button onclick="processPayment('Credit Card')">Credit Card</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart Section -->
+<section id="cart">
+    <h3>Cart Summary</h3>
+    <div id="cartSummary"></div>
+    <p id="totalPrice">Total: GH₵0.00</p>
+    <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

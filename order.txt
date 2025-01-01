@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ghana Farms</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Top Bar with Search -->
+    <div class="top-bar">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
+    </div>
+
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="gf-logo">GF</span>
+                <span class="site-name">Ghana Farms</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li> <!-- Updated Contact link -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Ghana Farms, your trusted source for the freshest fruits and vegetables straight from the farm to your table. Founded with a passion for supporting local agriculture and providing healthy, natural produce, Ghana Farms is dedicated to making high-quality food accessible to our community.</p>
+
+        <h3>Our Mission</h3>
+        <p>At Ghana Farms, our mission is simple: to offer nutritious, sustainably-grown produce that you can trust. We work closely with local farmers who use eco-friendly practices, ensuring that every item we sell is as fresh, wholesome, and affordable as possible.</p>
+
+        <h3>Our Products</h3>
+        <p>We specialize in a wide selection of Ghana’s finest fruits and vegetables, including tomatoes, spinach, mangoes, pineapples, and much more. Each product is handpicked and carefully inspected to meet the highest standards of quality. Our products are harvested at peak ripeness to deliver maximum flavor and nutrients.</p>
+
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li><strong>Freshness Guaranteed:</strong> We believe in delivering only the freshest produce directly to you.</li>
+            <li><strong>Locally-Sourced:</strong> By supporting local farmers, we’re helping to strengthen our community and reduce environmental impact.</li>
+            <li><strong>Customer-Centric:</strong> Your satisfaction is our top priority, and our team is committed to providing exceptional service and a seamless shopping experience.</li>
+        </ul>
+
+        <h3>Our Vision</h3>
+        <p>We envision a community where everyone has access to fresh, quality produce without compromise. By fostering sustainable agriculture and building lasting relationships with our customers and farmers, we’re proud to be a part of Ghana’s vibrant agricultural heritage.</p>
+
+        <p>Thank you for choosing Ghana Farms. Together, let’s support our local farmers, nourish our bodies, and build a healthier future.</p>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2024 Ghana Farms. All rights reserved.</p>
+    <p>Email: <a href="mailto:josehansahinre@gmail.com" class="contact-link">josehansahinre@gmail.com</a> | 
+       Phone: <span class="contact-link">+233-054-678-6538</span></p>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+    </div>
+</footer>
+
+
+</body>
+</html>
