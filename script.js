@@ -52,12 +52,7 @@ function displayCartSummary() {
     }
 }
 
-// Function to handle order placement (to be implemented later)
-function placeOrder() {
-    // Currently just shows an alert; can be modified to handle actual order submission
-    alert("Proceeding to payment...");
-}
-// Function to handle order placement - opens the payment modal
+// Function to handle order placement
 function placeOrder() {
     document.getElementById("paymentModal").style.display = "block";
 }
@@ -72,24 +67,24 @@ function processPayment(method) {
     alert("You have selected " + method + " as your payment method.");
     closeModal();
 }
+
+// Function to search for products and display results
 function searchSite() {
-    // Clear previous highlights
-    clearHighlights();
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const products = document.querySelectorAll('.product-grid .product');
+    let found = false;
 
-    // Get the search term
-    const searchTerm = document.querySelector('.search-container input[type="text"]').value.trim().toLowerCase();
-    if (!searchTerm) return;
-
-    // Get all text nodes in the body and highlight matches
-    highlightMatches(document.body, searchTerm);
-}
-
-// Function to clear previous highlights
-function clearHighlights() {
-    const highlights = document.querySelectorAll("mark.highlight");
-    highlights.forEach(mark => {
-        const parent = mark.parentNode;
-        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+    products.forEach(product => {
+        const productName = product.getAttribute('data-name').toLowerCase();
+        if (productName.includes(searchTerm)) {
+            product.style.display = ''; // Show product
+            found = true;
+        } else {
+            product.style.display = 'none'; // Hide product
+        }
     });
-}
 
+    if (!found) {
+        document.getElementById('productGrid').innerHTML = '<p>Product not available</p>';
+    }
+}
